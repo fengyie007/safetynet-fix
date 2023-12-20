@@ -52,4 +52,7 @@ fi
     if [[ "$(getprop ro.product.first_api_level)" -ge 33 ]]; then
         resetprop ro.product.first_api_level 32
     fi
+
+    # makes bank apps and Google Pay happy
+    resetprop sys.oem_unlock_allowed 0
 }&
